@@ -1,0 +1,47 @@
+@import "mixins";
+nav {
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 0px 50px 20px $theme-dark;
+    font-size: 30px;
+    display: block;
+    background-color: $theme-light;
+    padding: 10px;
+    ul {
+        li {
+            padding: 10px;
+            display: inline;
+            margin: 20px;
+            @include transition(.4s);
+            &:hover {
+                padding-left: 30px;
+                padding-right: 30px;
+                background-color: $theme-secondary;
+                cursor: pointer;
+                color: $theme-light;
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    nav {
+        top: auto;
+        bottom: 0;
+        padding: 0px;
+        ul {
+            li {
+                width: auto;
+                margin: 0;
+                border-left: 1px solid $theme-dark;
+                border-right: 1px solid $theme-dark;
+                @include transition(.4s);
+                &:hover {
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
