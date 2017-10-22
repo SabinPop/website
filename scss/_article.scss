@@ -21,14 +21,15 @@ article {
         border: 4px solid $theme-primary;
         color: $theme-dark;
     }
+    @include transition(.4s);
     border: 2px solid $theme-primary;
     hr {
         height: 2px;
         border: 0px;
         background-color: $theme-primary;
     }
-    @include transition(.4s);
     &:hover {
+        @include transition(.4s);
         background-color: $theme-light;
         border-radius: 20px;
         border: 2px solid $theme-secondary;

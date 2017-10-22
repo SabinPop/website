@@ -8,12 +8,12 @@ nav {
     font-size: 30px;
     display: block;
     background-color: $theme-light;
-    padding: 10px;
+    padding: 0px;
     ul {
         li {
-            padding: 10px;
-            display: inline;
-            margin: 20px;
+            padding: 15px;
+            display: inline-block;
+            margin: 0px;
             @include transition(.4s);
             &:hover {
                 padding-left: 30px;
@@ -28,19 +28,18 @@ nav {
 
 @media (max-width: 720px) {
     nav {
+        @include transition(.4s);
         top: auto;
         bottom: 0;
         padding: 0px;
         ul {
             li {
-                width: auto;
-                margin: 0;
-                border-left: 1px solid $theme-dark;
-                border-right: 1px solid $theme-dark;
-                @include transition(.4s);
-                &:hover {
-                    padding: 0px;
+                b {
+                    display: none;
                 }
+                width: 22%;
+                margin: 0;
+                padding: 10px 30px 10px 30px;
             }
         }
     }
